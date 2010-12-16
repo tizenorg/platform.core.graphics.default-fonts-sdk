@@ -1,0 +1,20 @@
+#!/bin/sh
+
+FONT_FILES="VeraSe.ttf VeraSeBd.ttf"
+
+if [ ${USER} == "root" ]
+then
+	# Change file owner
+	# Font files
+	for file in `echo $FONT_FILES`
+	do
+		chown root:root /usr/share/fonts/$file
+	done
+fi
+
+# Font files
+for file in `echo $FONT_FILES`
+do
+	chmod 644 /usr/share/fonts/$file
+done
+	

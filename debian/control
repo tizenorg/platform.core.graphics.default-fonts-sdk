@@ -1,7 +1,7 @@
 Source: default-fonts-sdk
 Section: misc
 Priority: extra
-Maintainer: Myoungwoon Kim <myoungwoon.kim@samsung.com>
+Maintainer: MyoungWoon Roy Kim <myoungwoon.kim@samsung.com>
 Uploaders: 
 Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FONT_FILES="VeraSe.ttf VeraSeBd.ttf"
+FONT_FILES="SLPSansBold_1119.ttf SLPSansMedium_1119.ttf SLPSansRegular_1119.ttf SLPSansLight_1119.ttf SLPSansFallbackBold.ttf SLPSansFallbackMedium.ttf SLPSansFallbackRegular.ttf VeraSe.ttf VeraSeBd.ttf"
 
 if [ ${USER} == "root" ]
 then

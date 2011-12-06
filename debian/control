@@ -1,8 +1,8 @@
 Source: default-fonts-sdk
 Section: misc
 Priority: extra
-Maintainer: Minsu Han <minsu81.han@samsung.com>, MyoungWoon Roy Kim <myoungwoon.kim@samsung.com> 
-Uploaders: 
+Maintainer: Minsu Han <minsu81.han@samsung.com>
+Uploaders:
 Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2
 Homepage: N/A
@@ -10,13 +10,6 @@ Homepage: N/A
 Package: default-fonts-sdk
 Section: misc
 Architecture: any
-Depends: default-fonts-vera
-Description: free fonts for SLP SDK
- This package is maintained by SDK team
-
-Package: default-fonts-vera
-Section: misc
-Architecture: any
 Depends:
-Description: Bitstream Vera fonts for SLP SDK
+Description: free fonts for SLP SDK
  This package is maintained by SDK team

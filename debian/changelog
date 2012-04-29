@@ -1,0 +1,7 @@
+default-fonts-sdk (0.0.1-5) unstable; urgency=low
+
+  * Initial Version
+  * Git: sdk/default-fonts-sdk
+  * Tag: default-fonts-sdk_0.0.1-5
+
+ -- Minsu Han <minsu81.han@samsung.com>  Tue, 06 Dec 2011 18:52:55 +0900

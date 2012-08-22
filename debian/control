@@ -2,7 +2,7 @@ Source: default-fonts-sdk
 Section: misc
 Priority: extra
 Maintainer: Minsu Han <minsu81.han@samsung.com>
-Uploaders: 
+Uploaders:
 Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2
 Homepage: N/A

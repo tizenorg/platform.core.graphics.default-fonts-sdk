@@ -2,7 +2,7 @@
 Name:       default-fonts-sdk
 Summary:    free fonts for SLP SDK
 Version:    0.0.1
-Release:    7
+Release:    8
 Group:      TO_BE/FILLED_IN
 License:    TO BE FILLED IN
 Source0:    %{name}-%{version}.tar.gz
@@ -27,10 +27,7 @@ mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildr
 %files
 %manifest default-fonts-sdk.manifest
 %defattr(0644,root,root,-)
-%{_datadir}/fonts/SLPSansBold.ttf
-%{_datadir}/fonts/SLPSansRegular.ttf
-%{_datadir}/fonts/SLPSansLight.ttf
-%{_datadir}/fonts/SLPSansMedium.ttf
-%{_datadir}/fallback_fonts/SLPSansFallbackMedium.ttf
-%{_datadir}/fallback_fonts/SLPSansFallbackRegular.ttf
-%{_datadir}/fallback_fonts/SLPSansFallbackBold.ttf
+%{_datadir}/fonts/TizenSansRegular.ttf
+%{_datadir}/fonts/TizenSansBold.ttf
+%{_datadir}/fallback_fonts/TizenSansFallbackRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansFallbackBold.ttf

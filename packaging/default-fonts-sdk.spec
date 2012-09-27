@@ -2,7 +2,7 @@
 Name:       default-fonts-sdk
 Summary:    free fonts for SLP SDK
 Version:    0.0.1
-Release:    8
+Release:    9
 Group:      TO_BE/FILLED_IN
 License:    TO BE FILLED IN
 Source0:    %{name}-%{version}.tar.gz

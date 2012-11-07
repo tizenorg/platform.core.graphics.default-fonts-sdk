@@ -2,7 +2,7 @@
 Name:       default-fonts-sdk
 Summary:    free fonts for SLP SDK
 Version:    0.0.1
-Release:    10
+Release:    12
 Group:      TO_BE/FILLED_IN
 License:    TO BE FILLED IN
 Source0:    %{name}-%{version}.tar.gz
@@ -53,3 +53,5 @@ mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildr
 %{_datadir}/fallback_fonts/TizenSansTamilRegular.ttf
 %{_datadir}/fallback_fonts/TizenSansTeluguBold.ttf
 %{_datadir}/fallback_fonts/TizenSansTeluguRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansHebrewBold.ttf
+%{_datadir}/fallback_fonts/TizenSansHebrewRegular.ttf

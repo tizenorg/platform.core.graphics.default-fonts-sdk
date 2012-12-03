@@ -55,5 +55,3 @@ mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildr
 %{_datadir}/fallback_fonts/TizenSansTeluguRegular.ttf
 %{_datadir}/fallback_fonts/TizenSansHebrewBold.ttf
 %{_datadir}/fallback_fonts/TizenSansHebrewRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansThaiBold.ttf
-%{_datadir}/fallback_fonts/TizenSansThaiRegular.ttf

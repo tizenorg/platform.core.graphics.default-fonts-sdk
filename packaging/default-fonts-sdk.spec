@@ -6,7 +6,7 @@ Release:    12
 Group:      TO_BE/FILLED_IN
 License:    TO BE FILLED IN
 Source0:    %{name}-%{version}.tar.gz
-Source1001: packaging/default-fonts-sdk.manifest
+Source1001: default-fonts-sdk.manifest
 
 %description
 free fonts for Tizen SDK
@@ -25,7 +25,7 @@ mkdir -p %{buildroot}%{_datadir}/fonts && cp -a fonts %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildroot}%{_datadir}
 
 %files
-%manifest default-fonts-sdk.manifest
+%manifest %{name}.manifest
 %defattr(0644,root,root,-)
 %{_datadir}/fonts/*
 %{_datadir}/fallback_fonts/*

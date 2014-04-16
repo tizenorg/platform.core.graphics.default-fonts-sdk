@@ -1,16 +1,88 @@
-#sbs-git:slp/sdk/default-fonts-sdk default-fonts-sdk 0.0.1 cfc28893f4bd5cb9a28ffb97c4ca0ffcf30024b9
+#default-fonts-sdk
 Name:       default-fonts-sdk
-Summary:    free fonts for SLP SDK
-Version:    0.0.1
-Release:    12
+Summary:    fonts for Tizen SDK
+Version:    1.2.2.1
+Release:    17
 Group:      TO_BE/FILLED_IN
-License:    TO BE FILLED IN
+License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
 Source1001: packaging/default-fonts-sdk.manifest
+Requires(post): fontconfig
 
 %description
-free fonts for SLP SDK
+fonts for Tizen SDK
 This package is maintained by SDK team
+
+
+%package -n slp-fonts-arabic
+Summary: SLP Arabic fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-arabic
+Arabic font set for SLP
+
+
+%package -n slp-fonts-hebrew
+Summary: SLP Hebrew fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-hebrew
+Hebrew font set for SLP
+
+
+%package -n slp-fonts-india
+Summary: SLP India fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-india
+India font set for SLP
+
+
+%package -n slp-fonts-korean
+Summary: SLP Korean fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-korean
+Korean font set for SLP
+
+
+%package -n slp-fonts-thai
+Summary: SLP Thai fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-thai
+Thai font set for SLP
+
+
+%package -n slp-fonts-armenian
+Summary: SLP Armenian fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-armenian
+Armenian font set for SLP
+
+%package -n slp-fonts-georgian
+Summary: SLP Georgian fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-georgian
+Georgian font set for SLP
+
+%package -n slp-fonts-ethiopic
+Summary: SLP Ethiopic fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-ethiopic
+Ethiopic font set for SLP
+
 
 %prep
 %setup -q
@@ -21,37 +93,97 @@ cp %{SOURCE1001} .
 %install
 rm -rf %{buildroot}
 
+mkdir -p %{buildroot}/usr/share/license && cp LICENSE %{buildroot}/usr/share/license/%{name}
 mkdir -p %{buildroot}%{_datadir}/fonts && cp -a fonts %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildroot}%{_datadir}
 
+%post
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-arabic
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-hebrew
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-india
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-korean
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-thai
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-armenian
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-georgian
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-ethiopic
+/usr/bin/fc-cache -f
+
+
 %files
 %manifest default-fonts-sdk.manifest
-%defattr(0644,root,root,-)
-%{_datadir}/fonts/TizenSansBold.ttf
-%{_datadir}/fonts/TizenSansRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansFallbackBold.ttf
-%{_datadir}/fallback_fonts/TizenSansFallbackRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansArabicBold.ttf
+%defattr(-,root,root,-)
+%{_datadir}/fonts/*
+%{_datadir}/fallback_fonts/*
+/usr/share/license/%{name}
+
+%files -n slp-fonts-arabic
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
 %{_datadir}/fallback_fonts/TizenSansArabicRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansBengalBold.ttf
-%{_datadir}/fallback_fonts/TizenSansBengalRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansGujaratiBold.ttf
-%{_datadir}/fallback_fonts/TizenSansGujaratiRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansHindiBold.ttf
-%{_datadir}/fallback_fonts/TizenSansHindiRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansKannadaBold.ttf
-%{_datadir}/fallback_fonts/TizenSansKannadaRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansMalayalamBold.ttf
-%{_datadir}/fallback_fonts/TizenSansMalayalamRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansOriyaBold.ttf
-%{_datadir}/fallback_fonts/TizenSansOriyaRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansPunjabiBold.ttf
-%{_datadir}/fallback_fonts/TizenSansPunjabiRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansSinhalaBold.ttf
-%{_datadir}/fallback_fonts/TizenSansSinhalaRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansTamilBold.ttf
-%{_datadir}/fallback_fonts/TizenSansTamilRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansTeluguBold.ttf
-%{_datadir}/fallback_fonts/TizenSansTeluguRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansHebrewBold.ttf
+
+%files -n slp-fonts-hebrew
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/TizenSansHebrewMedium.ttf
 %{_datadir}/fallback_fonts/TizenSansHebrewRegular.ttf
+
+%files -n slp-fonts-india
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/TizenSansBengaliRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansGujaratiRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansHindiMedium.ttf
+%{_datadir}/fallback_fonts/TizenSansHindiRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansKannadaRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansMalayalamRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansOriyaRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansPunjabiRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansSinhalaRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansTamilRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansTeluguRegular.ttf
+
+%files -n slp-fonts-korean
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/TizenSansKoreanMedium.ttf
+%{_datadir}/fallback_fonts/TizenSansKoreanRegular.ttf
+
+%files -n slp-fonts-thai
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/TizenSansThaiMedium.ttf
+%{_datadir}/fallback_fonts/TizenSansThaiRegular.ttf
+
+%files -n slp-fonts-armenian
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/TizenSansArmenianMedium.ttf
+%{_datadir}/fallback_fonts/TizenSansArmenianRegular.ttf
+
+%files -n slp-fonts-georgian
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/TizenSansGeorgianMedium.ttf
+%{_datadir}/fallback_fonts/TizenSansGeorgianRegular.ttf
+
+%files -n slp-fonts-ethiopic
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/TizenSansEthiopicRegular.ttf
+

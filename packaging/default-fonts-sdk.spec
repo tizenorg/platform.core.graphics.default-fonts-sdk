@@ -2,7 +2,7 @@
 Name:       default-fonts-sdk
 Summary:    fonts for Tizen SDK
 Version:    1.2.2.1
-Release:    17
+Release:    18
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
@@ -83,6 +83,30 @@ Requires(post): fontconfig
 %description -n slp-fonts-ethiopic
 Ethiopic font set for SLP
 
+%package -n slp-fonts-khmer
+Summary: SLP khmer fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-khmer
+Khmer font set for SLP
+
+%package -n slp-fonts-laos
+Summary: SLP laos fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-laos
+Laos font set for SLP
+
+%package -n slp-fonts-myanmar
+Summary: SLP myanmar fonts
+Group: TO_BE / FILLED_IN
+Requires(post): fontconfig
+
+%description -n slp-fonts-myanmar
+Myanmar font set for SLP
+
 
 %prep
 %setup -q
@@ -124,6 +148,15 @@ mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildr
 %post -n slp-fonts-ethiopic
 /usr/bin/fc-cache -f
 
+%post -n slp-fonts-khmer
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-laos
+/usr/bin/fc-cache -f
+
+%post -n slp-fonts-myanmar
+/usr/bin/fc-cache -f
+
 
 %files
 %manifest default-fonts-sdk.manifest
@@ -148,7 +181,6 @@ mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildr
 %defattr(-,root,root,-)
 %{_datadir}/fallback_fonts/TizenSansBengaliRegular.ttf
 %{_datadir}/fallback_fonts/TizenSansGujaratiRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansHindiMedium.ttf
 %{_datadir}/fallback_fonts/TizenSansHindiRegular.ttf
 %{_datadir}/fallback_fonts/TizenSansKannadaRegular.ttf
 %{_datadir}/fallback_fonts/TizenSansMalayalamRegular.ttf
@@ -167,7 +199,6 @@ mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildr
 %files -n slp-fonts-thai
 %manifest default-fonts-sdk.manifest
 %defattr(-,root,root,-)
-%{_datadir}/fallback_fonts/TizenSansThaiMedium.ttf
 %{_datadir}/fallback_fonts/TizenSansThaiRegular.ttf
 
 %files -n slp-fonts-armenian
@@ -186,4 +217,19 @@ mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildr
 %manifest default-fonts-sdk.manifest
 %defattr(-,root,root,-)
 %{_datadir}/fallback_fonts/TizenSansEthiopicRegular.ttf
+
+%files -n slp-fonts-khmer
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/TizenSansKhmerRegular.ttf
+
+%files -n slp-fonts-laos
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/TizenSansLaoRegular.ttf
+
+%files -n slp-fonts-myanmar
+%manifest default-fonts-sdk.manifest
+%defattr(-,root,root,-)
+%{_datadir}/fallback_fonts/ZawgyiOne2008.ttf
 

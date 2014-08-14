@@ -2,7 +2,7 @@
 Name:       default-fonts-sdk
 Summary:    fonts for Tizen SDK
 Version:    1.2.2.1
-Release:    18
+Release:    20
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
@@ -180,7 +180,7 @@ mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildr
 %manifest default-fonts-sdk.manifest
 %defattr(-,root,root,-)
 %{_datadir}/fallback_fonts/TizenSansBengaliRegular.ttf
-%{_datadir}/fallback_fonts/TizenSansGujaratiRegular.ttf
+%{_datadir}/fallback_fonts/TizenSansGujarathiRegular.ttf
 %{_datadir}/fallback_fonts/TizenSansHindiRegular.ttf
 %{_datadir}/fallback_fonts/TizenSansKannadaRegular.ttf
 %{_datadir}/fallback_fonts/TizenSansMalayalamRegular.ttf

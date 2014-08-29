@@ -1,7 +1,7 @@
 #default-fonts-sdk
 Name:       default-fonts-sdk
 Summary:    fonts for Tizen SDK
-Version:    1.2.2.2
+Version:    1.2.2.3
 Release:    21
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0

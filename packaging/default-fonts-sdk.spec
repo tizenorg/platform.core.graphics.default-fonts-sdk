@@ -1,12 +1,12 @@
-#default-fonts-sdk
 Name:       default-fonts-sdk
-Summary:    free fonts for Tizen SDK
+Summary:    Free fonts for Tizen SDK
 Version:    1.2.1.0
 Release:    12
-Group:      TO_BE/FILLED_IN
-License:    TO BE FILLED IN
+Group:      Graphics & UI Framework/Fonts
+License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
 Source1001: default-fonts-sdk.manifest
+BuildArch:  noarch
 
 %description
 free fonts for Tizen SDK
@@ -29,4 +29,3 @@ mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildr
 %defattr(0644,root,root,-)
 %{_datadir}/fonts/*
 %{_datadir}/fallback_fonts/*
-

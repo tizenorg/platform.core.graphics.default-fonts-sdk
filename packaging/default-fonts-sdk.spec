@@ -21,10 +21,17 @@ cp %{SOURCE1001} .
 
 %install
 rm -rf %{buildroot}
+%if 0%{?sec_product_feature_profile_wearable}
+    export TARGET=wearable
+%else
+    export TARGET=mobile
+%endif
 
 mkdir -p %{buildroot}/usr/share/license && cp LICENSE %{buildroot}/usr/share/license/%{name}
-mkdir -p %{buildroot}%{_datadir}/fonts && cp -a fonts %{buildroot}%{_datadir}
-mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a fallback_fonts %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_datadir}/fonts && cp -a common/fonts %{buildroot}%{_datadir}
+#cp -a $TARGET/fonts %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_datadir}/fallback_fonts && cp -a common/fallback_fonts %{buildroot}%{_datadir}
+#cp -a $TARGET/fallback_fonts %{buildroot}%{_datadir}
 
 %post
 /usr/bin/fc-cache -f

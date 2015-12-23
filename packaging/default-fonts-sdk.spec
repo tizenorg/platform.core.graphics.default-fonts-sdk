@@ -3,7 +3,7 @@ Summary:    free fonts for Tizen SDK
 Version:    1.2.1.0
 Release:    10
 Group:      TO_BE/FILLED_IN
-License:    TO BE FILLED IN
+License:    Apache-2.0 and GPL-2.0-with-font-exception
 Source0:    %{name}-%{version}.tar.gz
 Source1001: packaging/default-fonts-sdk.manifest
 #Requires(post): fontconfig
